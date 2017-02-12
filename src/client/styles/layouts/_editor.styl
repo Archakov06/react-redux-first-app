@@ -1,0 +1,163 @@
+.editor
+	display block
+	float left
+	width 100%
+	height calc(100vh - 82px)
+	background-color lighten($sidebar-color,0%)
+
+	.ace_editor
+		width 100%
+		height 100%
+
+	.ace_scroller
+		transition background-color 0.3s
+
+		&.disabled
+			background-color rgba(82, 82, 82, 0.04)
+
+	.ace-chrome .ace_gutter
+		background-color #f9f9f9
+
+	&__tabs
+		display block
+
+		ul#tabs
+			width 96%
+
+			li
+				display inline-block
+				float left
+				padding 20px 30px
+				width 10%
+				cursor pointer
+				position relative
+
+				input
+					display inline-block
+					border 0
+					background-color transparent
+					color $sidebar-text-color
+					width 90%
+
+				svg
+					opacity 0
+					width 12px
+					height 12px
+					position absolute
+					cursor pointer
+					right 15px
+					margin-top 5px
+					transform rotate(45deg)
+
+				&.active
+					background-color $editor-code-color
+					color $text-color
+
+					&:hover
+						background-color $editor-code-color
+
+				&:hover
+					background-color darken($editor-code-color,25%)
+
+					svg
+						opacity 0.2
+
+						&:hover
+							opacity 0.6
+
+		ul#editor-btns
+			display inline-block
+			position absolute
+			right 0
+			top 0
+
+			li
+				display inline-block
+				padding 21px
+				cursor pointer
+
+				svg
+					width 16px
+					height 16px
+					opacity 0.2
+					cursor pointer
+
+				&:hover
+					background-color darken($editor-code-color,25%)
+
+					svg
+						opacity 0.6
+
+	&__code
+		display block
+
+		pre#editor
+			height 100%
+			width 100%
+			font-family Consolas, Menlo, Courier, monospace
+			font-size 14px
+			line-height 22px
+
+
+.statusbar
+	display inline-block
+	width 100%
+	position absolute
+	bottom 0
+	left 0
+	padding 15px
+	color darken($sidebar-color,70%)
+	background-color lighten($sidebar-color,60%)
+	box-sizing border-box
+
+.viewer
+	border-left 3px solid #f7f7f7
+
+	&__close
+		display inline-block
+		position absolute
+		right 0
+		background-color #000
+		opacity 0.2
+		width 42px
+		transition all 0.3s
+		cursor pointer
+		padding 8px
+		height 42px
+		border-radius 50%
+		margin 10px
+
+		svg
+			width 100%
+			height 100%
+
+			use
+				fill #fff
+
+		&:hover
+			opacity 0.9
+
+#colorpicker
+	position absolute
+
+	.colorpicker
+		border 3px solid #f1f1f1
+		background-color #ffffff
+
+	.colorpicker_field, .colorpicker_hex, .colorpicker input
+		background none!important
+		border 0!important
+
+	.viewer
+		&__close
+			position absolute
+			left 323px
+			margin-top -15px
+			width 30px
+			height 30px
+			z-index 9999
+			opacity 1
+			background-color #f1f1f1
+
+			path
+				fill #8c8c8c

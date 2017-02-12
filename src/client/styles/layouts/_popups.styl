@@ -1,0 +1,60 @@
+div.settings-block
+	position absolute
+	z-index 999
+	right 0
+	top 130px
+	background-color #fff
+	width 475px
+	border-radius 6px
+	box-shadow 0px 3px 30px 0px rgba(0, 0, 0, 0.10)
+	padding 0 20px 10px
+	
+	#link-svg
+		width 14px
+		height 14px
+		position absolute
+		margin 13px 20px
+		opacity 0.7
+	
+	&__triangle
+		triangle('up', 1em, #fff)
+		position absolute
+		right 10px
+		top -14px
+	
+	ul
+		li
+			margin-bottom 20px
+			input[type="checkbox"]
+				float left
+				margin-right 10px
+	
+	select
+		width 100%
+		min-height 42px
+		text-align center
+	
+	input[type="text"]
+		border 1px solid #F4F4F4
+		background-color #fff
+		margin-bottom 0
+		width 100%
+		
+	span
+		margin-bottom 10px
+		display block
+	
+	&__col
+		width 50%
+		cursor pointer!important
+		float left
+		padding 30px 10px 0
+		
+		label:after
+			float right
+			right 20px
+			top -22px!important
+			left inherit!important
+		
+		&:hover
+			background-color transparent

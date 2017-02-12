@@ -6,7 +6,7 @@ import configureStore from './store/index'
 
 const store = configureStore()
 
-store.subscribe(function(){
+store.subscribe(() => {
   console.log(store.getState());
 });
 

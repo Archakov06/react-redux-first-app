@@ -1,0 +1,58 @@
+.tabs-panel
+
+	&__tabs
+		width 90%
+
+		li
+			min-width 100px
+			padding 0!important
+			background-color #fff
+			cursor pointer
+
+			&:hover
+				background-color darken(rgb(252, 252, 252), 0%)
+
+			&.active
+				background-color #f9f9f9
+
+		span
+			display inline-block
+			text-align center
+			padding 17px 30px
+			cursor pointer
+
+		svg#close-tab
+			float right
+			opacity 0.2
+			position relative
+			top 15px
+			right 15px
+
+			&:hover
+				opacity 0.8
+
+	&__panel
+		float right
+
+		li
+			width 48px
+
+			&:hover
+				background-color darken(#f9f9f9, 2%)
+
+				svg
+					opacity 0.6
+
+	ul
+
+		svg
+			display inline-block
+			width 18px
+			height 18px
+			vertical-align middle
+			opacity 0.3
+
+		li
+			display inline-block
+			cursor pointer
+			padding 15px

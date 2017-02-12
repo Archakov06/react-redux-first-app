@@ -5,7 +5,7 @@ module.exports = {
   devtool: 'cheap-module-eval-source-map',
   entry: [
     'webpack-hot-middleware/client',
-    './src/index'
+    './src/client/js/index'
   ],
   watch: true,
   output: {
@@ -21,6 +21,8 @@ module.exports = {
       test: /\.js$/,
       loaders: ['react-hot', 'babel'],
       include: path.join(__dirname, 'src')
-    }]
+    },
+    { test: /\.styl$/, loader: 'style-loader!css-loader!stylus-loader' }
+  ]
   }
 };
