@@ -8,6 +8,7 @@
 @import 'helpers/_reset.styl'
 @import 'helpers/_mixins.styl'
 @import 'helpers/_tooltip.styl'
+@import 'helpers/_input.styl'
 
 global-reset()
 normalize-css()
@@ -32,6 +33,10 @@ body
 	position relative
 	top -70px
 
+.container
+	height 100vh
+	background-color lighten($sidebar-color, 60%)
+
 @import 'layouts/_header.styl'
 @import 'layouts/_sidebar.styl'
 @import 'layouts/_editor.styl'
@@ -40,6 +45,7 @@ body
 @import 'layouts/_searchbox.styl'
 @import 'layouts/_tabs.styl'
 @import 'layouts/_popups.styl'
+@import 'layouts/_login.styl'
 
 .viewer
 	width 50%

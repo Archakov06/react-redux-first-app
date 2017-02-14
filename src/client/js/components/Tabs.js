@@ -24,7 +24,7 @@ export default class Shadow extends Component {
               <SVGLink name="add-btn" />
             </svg>
           </li>
-          <li id="setting-btn" ng-click="appCtrl.settingsShow()">
+          <li id="setting-btn">
             <svg>
               <SVGLink name="options-btn" />
             </svg>
