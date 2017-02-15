@@ -4,44 +4,22 @@ import { Link } from 'react-router'
 import { SVGLink } from '../helpers/svg'
 import SVGSprites from '../components/SVGSprites'
 
-export default class NotFound extends Component {
+import ContainerLayout from './ContainerLayout'
+
+export default class Login extends Component {
   render() {
     return (
-      <div className="container">
-        <SVGSprites />
+      <ContainerLayout>
         <div className="login-box">
           <div className="login-box__tabs">
             <ul>
-              <li className="active">Sign in</li>
-              <li>Registration</li>
+              <li><Link activeClassName="active" to="/auth/login">Sign in</Link></li>
+              <li><Link activeClassName="active" to="/auth/registration">Registration</Link></li>
             </ul>
           </div>
-          <div className="login-box__content">
-            <ul>
-              <li>
-                <label>Login:</label>
-                <input className="input" type="text" />
-              </li>
-              <li>
-                <label>Password:</label>
-                <input className="input" type="password" />
-              </li>
-              <li>
-                <button className="button button--black">Login</button>
-              </li>
-              <li>
-                <center>or</center>
-              </li>
-              <li>
-                <button className="button button--white" onclick="location.href=/">
-                  <SVGLink name="github" />
-                  <span>Github</span>
-                </button>
-              </li>
-            </ul>
-          </div>
+          {this.props.children}
         </div>
-      </div>
+      </ContainerLayout>
     )
   }
 }

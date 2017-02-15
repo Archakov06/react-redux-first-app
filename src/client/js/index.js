@@ -8,6 +8,9 @@ import Home from './containers/Home'
 import Login from './containers/Login'
 import NotFound from './containers/NotFound'
 
+import LoginLayout from './components/Layouts/LoginLayout'
+import RegistrationLayout from './components/Layouts/RegistrationLayout'
+
 import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 
 const store = configureStore()
@@ -21,7 +24,10 @@ render(
     <Router history={browserHistory}>
       <Route path='/' component={App}>
         <IndexRoute component={Home} />
-        <Route path='login' component={Login} />
+        <Route path='auth' component={Login}>
+          <Route path='login' component={LoginLayout} />
+          <Route path='registration' component={RegistrationLayout} />
+        </Route>
         <Route path='*' component={NotFound} />
       </Route>
     </Router>
