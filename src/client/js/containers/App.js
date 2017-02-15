@@ -7,7 +7,7 @@ export class App extends Component {
   }
 
   render() {
-    const { currentStore } = this.props
+    const { currentStore } = this.props;
     const editorActions = this.props.editorActions;
     return (
       <div>

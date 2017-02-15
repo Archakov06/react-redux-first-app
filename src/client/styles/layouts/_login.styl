@@ -5,8 +5,16 @@
   box-shadow 0px 3px 15px 0px rgba(0,0,0,0.05)
   position absolute
   left 50%
-  top 50%
-  transform translate(-50%, -50%)
+  top 10%
+  transform translateX(-50%)
+
+  span.login-box__error
+    display block
+    color #e67878
+    border-radius 3px
+    padding 5px
+    width 100%
+    margin-top 10px
 
   &__content
 
@@ -16,6 +24,7 @@
 
       li
         margin-bottom 20px
+        position relative
 
         center
           opacity 0.5

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import AceEditor from './AceEditor';
 import io from 'socket.io-client'
-let socket = io('//' + location.origin)
+//let socket = io('//' + location.origin)
 
 export default class Editor extends Component {
 
