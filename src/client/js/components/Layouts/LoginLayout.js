@@ -17,7 +17,7 @@ Object.assign(Validation.rules, {
             return validator.isEmail(value);
         },
         hint: value => {
-            return <span className='login-box__error'>{value} isnt an Email.</span>
+            return <span className='login-box__error'>Invalid email</span>
         }
     },
     password: {

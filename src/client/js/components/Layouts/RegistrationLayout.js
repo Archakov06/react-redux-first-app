@@ -16,7 +16,7 @@ Object.assign(Validation.rules, {
             return validator.isEmail(value);
         },
         hint: value => {
-            return <span className='login-box__error'>{value} isnt an Email.</span>
+            return <span className='login-box__error'>Invalid email</span>
         }
     },
     fullname: {
@@ -83,11 +83,11 @@ export default class RegistrationLayout extends Component {
             </li>
             <li>
               <label>Password:</label>
-              <Validation.components.Input autoComplete="off" value="" className="input" name='password' type="password" validations={['required','password']}/>
+              <Validation.components.Input autoComplete="off" value="" placeholder='*******' className="input" name='password' type="password" validations={['required','password']}/>
             </li>
             <li>
               <label>Repeat password:</label>
-              <Validation.components.Input autoComplete="off" value="" className="input" name='password2' type="password" validations={['required','password']}/>
+              <Validation.components.Input autoComplete="off" value="" placeholder='*******' className="input" name='password2' type="password" validations={['required','password']}/>
             </li>
             <br/>
             <li>
